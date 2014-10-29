@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Minigame 6</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script src="game.js"></script>
+	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+		$(document).ready(function(){
+		    $("#regis").hide();
+		    $("#main").show();
+		});
+	</script>
+</head>
+
+
+<body onLoad=stat()>
+	<center>
+		<img src="image/title.png">
+		<div id="regis" style="margin-top:100px;">
+		    <form method="POST" action="register.php">
+		        <h1>Registrasi</h1>
+		        <div>
+		          <input type="text" placeholder="Nama" id="nama" name="nama" />
+		        </div>
+		        <div>
+		          <input type="text" placeholder="Nomor HP" required="" id="nohp" name="nohp" />
+		        </div>
+		        <div>
+		          <input type="text" placeholder="Alamat" required="" id="alamat"name="alamat" />
+		        </div>
+		        <div>
+		          <input type="submit" value="Selesai" />
+		        </div>
+		    </form>    
+		</div>
+
+		<div id="main">
+			<form name=game>
+			<input type=button class="btn" value="Play Again" onClick="playAgain();">
+			<input type=button class="btn" value="Game Help" onClick="help();">
+			<input type=button class="btn" value="Quit Game" onClick="quitGame();"><br><br>
+			
+				<table>
+					<tr>
+						<td><a href="javascript:yourChoice('A')"><img src="blank.jpg" border=0 height=100 width=100 name=A alt="Top-Left"></a></td>
+						<td><a href="javascript:yourChoice('B')"><img src="blank.jpg" border=0 height=100 width=100 name=B alt="Top-Center"></a></td>
+						<td><a href="javascript:yourChoice('C')"><img src="blank.jpg" border=0 height=100 width=100 name=C alt="Top-Right"></a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:yourChoice('D')"><img src="blank.jpg" border=0 height=100 width=100 name=D alt="Middle-Left"></a></td>
+						<td><a href="javascript:yourChoice('E')"><img src="blank.jpg" border=0 height=100 width=100 name=E alt="Middle-Center"></a></td>
+						<td><a href="javascript:yourChoice('F')"><img src="blank.jpg" border=0 height=100 width=100 name=F alt="Middle-Right"></a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:yourChoice('G')"><img src="blank.jpg" border=0 height=100 width=100 name=G alt="Bottom-Left"></a></td>
+						<td><a href="javascript:yourChoice('H')"><img src="blank.jpg" border=0 height=100 width=100 name=H alt="Bottom-Center"></a></td>
+						<td><a href="javascript:yourChoice('I')"><img src="blank.jpg" border=0 height=100 width=100  name=I alt="Bottom-Right"></a></td>
+					</tr>
+				</table>
+				
+				<table>
+					<h3>Score: </h3>
+					<tr>
+						<td><input type=text size=8 name=you id="score"></td>
+						<td><input type=text size=8 name=computer></td>	
+						<td><input type=text size=8 name=ties></td>
+					</tr>
+					<tr>
+						<td><h3>You</h3></td>
+						<td><h3>Computer</h3></td>
+						<td><h3>Ties</h3></td>
+					</tr>
+					<tr>
+
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>	
+</body>
+</html>
